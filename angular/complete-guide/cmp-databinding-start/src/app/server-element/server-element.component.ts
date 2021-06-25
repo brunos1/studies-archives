@@ -2,14 +2,15 @@ import {
   Component,
   Input,
   OnInit,
-  // ViewEncapsulation
+  ViewEncapsulation
 } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
   templateUrl: './server-element.component.html',
   styleUrls: ['./server-element.component.css'],
-  // encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None // takes off ViewEncapsulation
+  // encapsulation: ViewEncapsulation.ShadowDom // uses the shadow dom simulation
 })
 export class ServerElementComponent implements OnInit {
   // tslint:disable-next-line:no-input-rename
