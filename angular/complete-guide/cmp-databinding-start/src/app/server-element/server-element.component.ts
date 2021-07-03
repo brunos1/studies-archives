@@ -14,7 +14,7 @@ import {
 })
 export class ServerElementComponent implements OnInit {
   // tslint:disable-next-line:no-input-rename
-  @Input('srvElement')
+  @Input('srvElement') // make it bindable from outside, pass data into this component
   element: {
     type: string,
     name: string,
