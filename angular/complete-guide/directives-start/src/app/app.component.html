@@ -28,7 +28,9 @@
         </div>
       </ul>
       <p appBasicHighLight>Style me with a basic attribute directive</p>
-      <p appBetterHighlight>Style me with a better attribute directive</p>
+      <!--<p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'">Style me with a better attribute directive</p>-->
+      <!--<p [appBetterHighlight]="'red'" [defaultColor]="'yellow'">Style me with a better attribute directive</p>-->
+      <p [appBetterHighlight]="'red'" defaultColor="yellow">Style me with a better attribute directive</p><!-- when it is a string -->
       <ng-template [ngIf]="onlyOdd">
         <p>Only odd</p>
       </ng-template>
