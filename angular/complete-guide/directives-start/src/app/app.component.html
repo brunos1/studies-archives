@@ -26,6 +26,19 @@
             {{ even }}
           </li>
         </div>
+        <!-- what structural directives does behind the scenes (why it does have a * ?)-->
+        <!--<ng-template [ngIf]="!onlyOdd">
+          <div>
+            <li
+              class="list-group-item"
+              [ngClass]="{odd: even % 2 !== 0}"
+              [ngStyle]="{backgroundColor: even % 2 !== 0 ? 'yellow' : 'transparent'}"
+              *ngFor="let even of evenNumbers"
+            >
+              {{ even }}
+            </li>
+          </div>
+        </ng-template>-->
       </ul>
       <p appBasicHighLight>Style me with a basic attribute directive</p>
       <!--<p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'">Style me with a better attribute directive</p>-->
