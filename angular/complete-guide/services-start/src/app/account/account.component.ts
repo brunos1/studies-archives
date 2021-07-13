@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import {LoggingService} from '../logging.service';
-import {AccountsService} from '../accountsService';
+import {AccountsService} from '../accounts.service';
 
 @Component({
   selector: 'app-account',
