@@ -54,6 +54,13 @@
       <!--<p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'">Style me with a better attribute directive</p>-->
       <!--<p [appBetterHighlight]="'red'" [defaultColor]="'yellow'">Style me with a better attribute directive</p>-->
       <p [appBetterHighlight]="'red'" defaultColor="yellow">Style me with a better attribute directive</p><!-- when it is a string -->
+      <div [ngSwitch]="value">
+        <p *ngSwitchCase="5">Value is {{value}}</p>
+        <p *ngSwitchCase="10">Value is {{value}}</p>
+        <p *ngSwitchCase="15">Value is {{value}}</p>
+        <p *ngSwitchCase="20">Value is {{value}}</p>
+        <p *ngSwitchDefault>Value is default</p>
+      </div>
       <ng-template [ngIf]="onlyOdd">
         <p>Only odd</p>
       </ng-template>
