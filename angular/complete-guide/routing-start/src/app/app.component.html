@@ -9,9 +9,19 @@
         <li role="presentation"><a [routerLink]=['/users'] >Users</a></li> this is the wrong way
         old ways which doesn't work in current 12 version of angular
         -->
-        <li role="presentation" class="active"><a routerLink="/">Home</a></li>
-        <li role="presentation"><a routerLink="/servers">Servers</a></li>
-        <li role="presentation"><a [routerLink]="'users'" >Users</a></li>
+        <li
+          role="presentation"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact : true }"
+        ><a routerLink="/">Home</a></li>
+        <li
+          role="presentation"
+          routerLinkActive="active"
+        ><a routerLink="/servers">Servers</a></li>
+        <li
+          role="presentation"
+          routerLinkActive="active"
+        ><a [routerLink]="'users'" >Users</a></li>
       </ul>
     </div>
   </div>
