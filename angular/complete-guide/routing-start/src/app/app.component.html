@@ -4,12 +4,13 @@
       <ul class="nav nav-tabs">
         <!--
         <li role="presentation" class="active"><a routerLink="/">Home</a></li>
-        <li role="presentation"><a routerLink="/servers">Servers</a></li>
-        <li role="presentation"><a [routerLink]=['/users'] >Users</a></li>
+        <li role="presentation"><a routerLink="/servers">Servers</a></li> absolute paths
+        <li role="presentation"><a routerLink="servers">Servers</a></li> relative paths
+        <li role="presentation"><a [routerLink]=['/users'] >Users</a></li> this is the wrong way
         old ways which doesn't work in current 12 version of angular
         -->
         <li role="presentation" class="active"><a routerLink="/">Home</a></li>
-        <li role="presentation"><a routerLink="servers">Servers</a></li>
+        <li role="presentation"><a routerLink="/servers">Servers</a></li>
         <li role="presentation"><a [routerLink]="'users'" >Users</a></li>
       </ul>
     </div>
