@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     // Send Http request
     // console.log(postData);
     this.http.post<{ name: string }>(
-      'https://ng-course-d3b5b-default-rtdb.firebaseio.com/posts.json',
+      'https://decent-envoy-231618-default-rtdb.firebaseio.com/posts.json',
       postData
     ).subscribe(responseData => {
       console.log(responseData);
@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
 
   private fetchPosts() {
     this.http.get<{ [key: string]: Post }>(
-      'https://ng-course-d3b5b-default-rtdb.firebaseio.com/posts.json')
+      'https://decent-envoy-231618-default-rtdb.firebaseio.com/posts.json')
       .pipe(map(responseData => {
         const postsArray: Post[] = [];
         for (const key in responseData) {
