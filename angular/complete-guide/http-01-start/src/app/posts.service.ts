@@ -35,4 +35,8 @@ export class PostsService {
         })
       );
   }
+
+  deletePosts() {
+    return this.http.delete('https://decent-envoy-231618-default-rtdb.firebaseio.com/posts.json');
+  }
 }
