@@ -21,19 +21,18 @@ export class PostsService {
   }
 
   fetchPosts() {
-    this.http.get<{ [key: string]: Post }>(
+    return this.http.get<{ [key: string]: Post }>(
       'https://decent-envoy-231618-default-rtdb.firebaseio.com/posts.json')
-      .pipe(map(responseData => {
-        const postsArray: Post[] = [];
-        for (const key in responseData) {
-          if (responseData.hasOwnProperty(key)) {
-            postsArray.push({...responseData[key], id: key});
+      .pipe(
+        map(responseData => {
+          const postsArray: Post[] = [];
+          for (const key in responseData) {
+            if (responseData.hasOwnProperty(key)) {
+              postsArray.push({...responseData[key], id: key});
+            }
           }
-        }
-        return postsArray;
-      }))
-      .subscribe(posts => {
-        // ...
-      });
+          return postsArray;
+        })
+      );
   }
 }
